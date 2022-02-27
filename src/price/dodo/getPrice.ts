@@ -3,12 +3,10 @@ import { BigNumber, ethers } from "ethers";
 dotEnvConfig();
 import * as DODOV2Json from "../../abis/IDODOV2.json";
 import { flashloanAddress } from "../../config";
-import { findToken, getBigNumber } from "../../utils";
+import { findToken, getBigNumber, getMaticProvider } from "../../utils";
 import { DODOV2Pool } from "./pool";
 
-const maticProvider = new ethers.providers.JsonRpcProvider(
-  process.env.ALCHEMY_POLYGON_RPC_URL
-);
+const maticProvider = getMaticProvider();
 
 const getDODOV2Pool = (tokenIn: string, tokenOut: string) => {
   const tokenInSymbol = findToken(tokenIn);

@@ -3,11 +3,9 @@ import * as FlashloanJson from "./abis/Flashloan.json";
 import { flashloanAddress, loanAmount, gasLimit, gasPrice } from "./config";
 import { IToken, dodoV2Pool } from "./constants/addresses";
 import { IFlashloanRoute, IParams } from "./interfaces/main";
-import { getBigNumber } from "./utils/index";
+import { getBigNumber, getMaticProvider } from "./utils/index";
 
-const maticProvider = new ethers.providers.JsonRpcProvider(
-  process.env.ALCHEMY_POLYGON_RPC_URL
-);
+const maticProvider = getMaticProvider();
 
 if (process.env.PRIVATE_KEY === undefined) {
   throw new Error("Private key is not defined");

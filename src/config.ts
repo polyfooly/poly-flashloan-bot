@@ -1,9 +1,9 @@
 import { ERC20Token } from "./constants/addresses";
 
-export const renderInterval = 1 * 1000;
+export const renderInterval = 0.7 * 1000;
 
 // interval of price check (ms)
-export const interval = 10 * 1000;
+export const interval = 3 * 1000;
 
 export const loanAmount = 1000;
 export const diffAmount = 10; // Not enough amount to return loan
@@ -22,10 +22,10 @@ export const explorerURL = "https://polygonscan.com";
 
 export const baseTokens = [
   ERC20Token.DAI,
-  // ERC20Token.WETH,
+  //ERC20Token.WETH,
   ERC20Token.USDC,
   ERC20Token.USDT,
-  // ERC20Token.WMATIC,
+  ERC20Token.WMATIC,
 ];
 
 export const tradingTokens = [
@@ -34,6 +34,9 @@ export const tradingTokens = [
   ERC20Token.USDC,
   ERC20Token.USDT,
   ERC20Token.WMATIC,
+  //ERC20Token.COMP,
+  //ERC20Token.LINK,
+  //ERC20Token.CRV
 ];
 
 /**
@@ -53,7 +56,7 @@ export const protocols =
   "POLYGON_SUSHISWAP,POLYGON_QUICKSWAP,POLYGON_APESWAP,POLYGON_JETSWAP,POLYGON_WAULTSWAP,POLYGON_UNISWAP_V3";
 
 export const gasLimit = 15000000;
-export const gasPrice = 30; // gwei
+export const gasPrice = 50; // gwei
 
 export const routeParts = [
   [10000],

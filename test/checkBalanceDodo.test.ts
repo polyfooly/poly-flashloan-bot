@@ -4,6 +4,7 @@ import { dodoV2Pool, ERC20Token } from "../src/constants/addresses";
 import { polygonChainID } from "../src/constants/chainId";
 import * as DodoPool from "../src/abis/IDODO.json";
 import { Network } from "@ethersproject/networks";
+import { getMaticProvider } from "../src/utils/index";
 import { config as dotEnvConfig } from "dotenv";
 dotEnvConfig();
 
@@ -14,7 +15,7 @@ describe("DODO pool check", () => {
     _defaultProvider: (providers) =>
       new providers.JsonRpcProvider(process.env.ALCHEMY_POLYGON_RPC_URL),
   };
-  const provider = ethers.getDefaultProvider(matic);
+  const provider = getMaticProvider();
 
   describe("Check if dodo pools have enough tokens", () => {
     for (const [name, poolAddr] of Object.entries(dodoV2Pool)) {

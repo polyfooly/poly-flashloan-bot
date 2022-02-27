@@ -2,11 +2,9 @@ import { config as dotEnvConfig } from "dotenv";
 import { BigNumber, ethers } from "ethers";
 dotEnvConfig();
 import * as UniswapV2Router from "../../../abis/IUniswapV2Router02.json";
-import { getBigNumber } from "../../../utils";
+import { getBigNumber, getMaticProvider } from "../../../utils";
 
-const maticProvider = new ethers.providers.JsonRpcProvider(
-  process.env.ALCHEMY_POLYGON_RPC_URL
-);
+const maticProvider = getMaticProvider();
 
 /**
  *

@@ -2645,6 +2645,31 @@ dotenv@latest:
   languageName: node
   linkType: hard
 
+"flashbot@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "flashbot@workspace:."
+  dependencies:
+    "@openzeppelin/contracts": latest
+    "@types/jest": latest
+    "@types/node": latest
+    "@uniswap/sdk-core": ^3.0.1
+    "@uniswap/v3-sdk": ^3.8.1
+    axios: latest
+    console-table-printer: latest
+    dotenv: latest
+    ethers: ^5.5.3
+    husky: latest
+    jest: latest
+    lint-staged: latest
+    nodemon: latest
+    pinst: latest
+    prettier: latest
+    ts-jest: latest
+    ts-node: latest
+    typescript: latest
+  languageName: unknown
+  linkType: soft
+
 "follow-redirects@npm:^1.14.4":
   version: 1.14.6
   resolution: "follow-redirects@npm:1.14.6"
@@ -5008,31 +5033,6 @@ resolve@^1.20.0:
   checksum: 2ca9d616e424f645838ebaabb04f85d94ea999e0f8393dc07f86c435af22ed88cb83958feeabd1bb7bc537c635ed47454255635502c6808a6df61af1f41af750
   languageName: node
   linkType: hard
-
-"solidity-examples@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "solidity-examples@workspace:."
-  dependencies:
-    "@openzeppelin/contracts": latest
-    "@types/jest": latest
-    "@types/node": latest
-    "@uniswap/sdk-core": ^3.0.1
-    "@uniswap/v3-sdk": ^3.8.1
-    axios: latest
-    console-table-printer: latest
-    dotenv: latest
-    ethers: ^5.5.3
-    husky: latest
-    jest: latest
-    lint-staged: latest
-    nodemon: latest
-    pinst: latest
-    prettier: latest
-    ts-jest: latest
-    ts-node: latest
-    typescript: latest
-  languageName: unknown
-  linkType: soft
 
 "source-map-support@npm:^0.5.6":
   version: 0.5.21

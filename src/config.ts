@@ -5,7 +5,7 @@ export const renderInterval = 0.7 * 1000;
 // interval of price check (ms)
 export const interval = 3 * 1000;
 
-export const loanAmount = 1000;
+export const loanAmount = 2000;
 export const diffAmount = 10; // Not enough amount to return loan
 
 //export const chainId = 1;// Ethereum
@@ -13,6 +13,7 @@ export const diffAmount = 10; // Not enough amount to return loan
 export const chainId = 137; // Polygon
 
 export const explorerURL = "https://polygonscan.com";
+export const useWebSocket = false;
 
 /**
  * Token pair the bot trading
@@ -56,7 +57,7 @@ export const protocols =
   "POLYGON_SUSHISWAP,POLYGON_QUICKSWAP,POLYGON_APESWAP,POLYGON_JETSWAP,POLYGON_WAULTSWAP,POLYGON_UNISWAP_V3";
 
 export const gasLimit = 15000000;
-export const gasPrice = 50; // gwei
+export const gasPrice = 150; // gwei
 
 export const routeParts = [
   [10000],

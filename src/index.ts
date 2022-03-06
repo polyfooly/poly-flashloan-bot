@@ -1,5 +1,3 @@
-import { config as dotEnvConfig } from "dotenv";
-dotEnvConfig();
 import { checkArbitrage } from "./price/1inch";
 import {
   baseTokens,

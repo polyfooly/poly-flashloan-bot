@@ -9,12 +9,12 @@ import { config as dotEnvConfig } from "dotenv";
 dotEnvConfig();
 
 describe("DODO pool check", () => {
-  const matic: Network = {
+  /*const matic: Network = {
     name: "matic",
     chainId: polygonChainID,
     _defaultProvider: (providers) =>
       new providers.JsonRpcProvider(process.env.ALCHEMY_POLYGON_RPC_URL),
-  };
+  };*/
   const provider = getMaticProvider();
 
   describe("Check if dodo pools have enough tokens", () => {

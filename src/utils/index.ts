@@ -1,8 +1,6 @@
 import { ethers } from "ethers";
 import { dodoV2Pool, ERC20Token, uniswapRouter } from "../constants/addresses";
-import { polygonChainID } from "../constants/chainId";
-import { config as dotEnvConfig } from "dotenv";
-dotEnvConfig();
+export { getMaticProvider } from "./provider";
 
 export const getBigNumber = (amount: number, decimals = 18) => {
   return ethers.utils.parseUnits(amount.toString(), decimals);
@@ -63,27 +61,4 @@ export const findPool = (pool: string) => {
  */
 export const findRouterFromProtocol = (protocol: number) => {
   return uniswapRouter[Object.keys(uniswapRouter)[protocol]];
-};
-
-/*const maticProvider = new ethers.providers.JsonRpcProvider(
-  process.env.ALCHEMY_POLYGON_RPC_URL
-);*/
-
-/*if (process.env.ALCHEMY_POLYGON_RPC_WS_URL === undefined) {
-  throw new Error("Private key is not defined");
-};*/
-
-/*const maticProvider = new ethers.providers.WebSocketProvider(
-  process.env.ALCHEMY_POLYGON_RPC_WS_URL, polygonChainID
-);*/
-
-export const getMaticProvider = () => {
-  if (process.env.ALCHEMY_POLYGON_RPC_WS_URL === undefined) {
-    throw new Error("Private key is not defined");
-  }
-  const maticProvider = new ethers.providers.WebSocketProvider(
-    process.env.ALCHEMY_POLYGON_RPC_WS_URL,
-    polygonChainID
-  );
-  return maticProvider;
 };

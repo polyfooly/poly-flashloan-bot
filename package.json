@@ -34,7 +34,8 @@
     "dotenv": "latest",
     "ethers": "^5.5.3",
     "ts-node": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "yarn": "^1.22.17"
   },
   "packageManager": "yarn@3.0.2",
   "lint-staged": {

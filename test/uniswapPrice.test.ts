@@ -1,7 +1,5 @@
 import { findRouter, findRouterFromProtocol, getBigNumber } from "../src/utils";
 import { uniswapRouter } from "../src/constants/addresses";
-import { config as dotEnvConfig } from "dotenv";
-dotEnvConfig();
 import { expectPriceOnDex } from "../src/expect";
 import { baseTokens, tradingTokens } from "../src/config";
 

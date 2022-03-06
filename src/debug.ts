@@ -3,14 +3,9 @@ import { ethers } from "ethers";
 import * as ABI from "./abis/Flashloan.json";
 import { IFlashloanRoute } from "./interfaces/main";
 import { findPool, findRouter, findToken } from "./utils";
+import { getMaticProvider } from "./utils";
 
-if (process.env.ALCHEMY_POLYGON_RPC_URL === undefined) {
-  throw new Error("Please set ALCHEMY_POLYGON_RPC_URL environment variable.");
-}
-
-const maticProvider = new ethers.providers.JsonRpcProvider(
-  process.env.ALCHEMY_POLYGON_RPC_URL
-);
+const maticProvider = getMaticProvider();
 
 const inter = new ethers.utils.Interface(ABI.abi);
 
